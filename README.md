@@ -5,7 +5,7 @@ Template for building go applications with [tgclient](https://github.com/3bl3gam
 ## Template customization
 
 ```sh
-sed * -i -e 's/tgclient-application-template/<application-name>/g' -e 's/Layerex/<your GitHub username>/g'
+sed * .gitignore -i -e 's/tgclient-application-template/<application-name>/g' -e 's/Layerex/<your GitHub username>/g'
 ```
 
 Don't forget to update libraries before proceeding to development:
