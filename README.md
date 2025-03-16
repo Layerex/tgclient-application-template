@@ -14,17 +14,16 @@ Don't forget to update libraries before proceeding to development:
 go get -u && go mod tidy
 ```
 
-## Running
+# Installation
 
 ```sh
-go build
-./tgclient-application-template
+sudo install tgclient-application-template /usr/local/bin
 ```
 
 ## Usage
 
 ```text
-usage: ./tgclient-application-template [-h] [--dont-save-session] [--app-id APP_ID] [--app-hash APP_HASH]
+usage: tgclient-application-template [-h] [--dont-save-session] [--app-id APP_ID] [--app-hash APP_HASH]
 
 <description>
 
