@@ -42,9 +42,6 @@ func ParseArgs() Args {
 		}
 		switch os.Args[i] {
 		case "--app-id":
-			if args.AppID != 0 {
-				panic("--app-id option is provided more than one time")
-			}
 			nextArg()
 			argument, err := strconv.Atoi(os.Args[i])
 			if err != nil {
@@ -52,18 +49,12 @@ func ParseArgs() Args {
 			}
 			args.AppID = int32(argument)
 		case "--app-hash":
-			if args.AppHash != "" {
-				panic("--app-hash option is provided more than one time")
-			}
 			nextArg()
 			if len(os.Args[i]) != 32 || !IsLowercaseHex(os.Args[i]) {
 				panic("--app-hash value has to be a lowercase hex string of 32 characters")
 			}
 			args.AppHash = os.Args[i]
 		case "--dont-save-session":
-			if args.DontSaveSession {
-				panic("--dont-save-session option is provided more than one time")
-			}
 			args.DontSaveSession = true
 		case "-h", "--help":
 			fmt.Printf(helpMessage, os.Args[0], path.Join(xdg.DataHome, sessionFile))
